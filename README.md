@@ -4,7 +4,7 @@ A React-based quiz application that fetches multiple-choice questions from the O
 
 ## Demo
 
-[Live Demo](https://alhadwan.github.io/PokeAPI-Integration/)
+[Live Demo](https://alhadwan.github.io/QuizApp-Trivia/)
 
 ## Features
 
