@@ -78,33 +78,39 @@ const QuestionForm = ({ selectedOptions }) => {
     <div>
       <button onClick={() => window.history.back()}>Back</button>
       <h1>Question Form</h1>
-      <div
-        style={{
-          background: "#f8f9fa",
-          padding: "1em",
-          borderRadius: "8px",
-          marginBottom: "1em",
-          border: "1px solid #ddd",
-        }}
-      >
-        <strong>Instructions:</strong>
-        <ul style={{ margin: "0.5em 0 0 1.5em", listStyleType: "none" }}>
-          <li>Read each question carefully.</li>
-          <li>Select your answer by clicking one of the radio buttons.</li>
-          <li>
-            All questions are multiple choice. Only one answer can be selected
-            per question.
-          </li>
-          <li>
-            Click <b>Submit</b> when you have answered all questions.
-          </li>
-          <li>You will see your results and can start over if you wish.</li>
-        </ul>
-      </div>
+
       {!success ? (
         <>
           {loading && <p>Loading...</p>}
+
           <form onSubmit={handleSubmit}>
+            <div
+              style={{
+                background: "#f8f9fa",
+                padding: "1em",
+                borderRadius: "8px",
+                marginBottom: "1em",
+                border: "1px solid #ddd",
+              }}
+            >
+              <strong>Instructions:</strong>
+              <ul style={{ margin: "0.5em 0 0 1.5em", listStyleType: "none" }}>
+                <li>Read each question carefully.</li>
+                <li>
+                  Select your answer by clicking one of the radio buttons.
+                </li>
+                <li>
+                  All questions are multiple choice. Only one answer can be
+                  selected per question.
+                </li>
+                <li>
+                  Click <b>Submit</b> when you have answered all questions.
+                </li>
+                <li>
+                  You will see your results and can start over if you wish.
+                </li>
+              </ul>
+            </div>
             {questions.map((q, idx) => (
               <div key={idx} style={{ marginBottom: "20px" }}>
                 <h3>
